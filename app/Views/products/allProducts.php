@@ -58,6 +58,14 @@
                             <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
                         </div>
                         <div class="card-body">
+                            <!-- === alert ===-->
+                            <?php if (session()->getFlashdata('msg')) : ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <?php echo session()->getFlashdata('msg'); ?>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                            <?php endif; ?>
+                            <!-- ====== -->
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead style="font-weight: 900;">
@@ -81,28 +89,28 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        
 
-	
-	
-	
-	
-	
 
-                                        
-                                        <?php  foreach( $products as $product ) : ?>
-                                        <tr>
-                                            <td> <?php echo $product['product_id']  ?> </td>
-                                            <td> <?php echo $product['product']  ?> </td>
-                                            <td> <?php echo $product['category']  ?> </td>
-                                            <td> <?php echo $product['price']  ?> </td>
-                                            <td> <?php echo $product['sku']  ?> </td>
-                                            <td> <?php echo $product['model']  ?> </td>
-                                           
-                                        </tr>
-                                        
-                                        <?php  endforeach; ?>
-                                        
+
+
+
+
+
+
+
+                                        <?php foreach ($products as $product) : ?>
+                                            <tr>
+                                                <td> <?php echo $product['product_id']  ?> </td>
+                                                <td> <?php echo $product['product']  ?> </td>
+                                                <td> <?php echo $product['category']  ?> </td>
+                                                <td> <?php echo $product['price']  ?> </td>
+                                                <td> <?php echo $product['sku']  ?> </td>
+                                                <td> <?php echo $product['model']  ?> </td>
+
+                                            </tr>
+
+                                        <?php endforeach; ?>
+
                                     </tbody>
                                 </table>
                             </div>
