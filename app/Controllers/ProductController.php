@@ -44,7 +44,12 @@ class ProductController extends BaseController
 
    
 
-        $rules = [];
+        $rules = [
+            'name' => 'required|max_length[30]',
+            // 'password' => 'required|max_length[255]|min_length[10]',
+            // 'passconf' => 'required|max_length[255]|matches[password]',
+            // 'email'    => 'required|max_length[254]|valid_email',
+        ];
 
         if (! $this->validate($rules)) {
             return view('/products/create');
@@ -52,7 +57,7 @@ class ProductController extends BaseController
             $this->products->insert($data);
             $session = session();
             $session->setFlashdata('msg', 'Inserted Successfully');
-            $this->response->redirect('/products/');
+            $this->response->redirect('/products');
         }
     }
 
