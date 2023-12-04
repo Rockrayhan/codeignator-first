@@ -9,14 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>  </title>
+    <title> Edit </title>
 
     <!-- Custom fonts for this template-->
-    <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php  echo site_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href=" <?php echo site_url('assets/css/sb-admin-2.min.css') ?> " rel="stylesheet">
 
 </head>
 
@@ -60,30 +60,30 @@
                             <!-- No Labels Form -->
                             <form class="row g-3" method="post" action="/products/store">
                                 <div class="col-md-12">
-                                    <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= set_value('name') ?>" >
+                                    <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= $product ?>" >
                                 </div> <br>
 
+<div class="col-md-6">
+    <select id="inputState" class="form-select" name="cat">
+        <option disabled selected>Category</option>
+        <option <?= ($category=="Car")?"selected" : "" ?>>Car</option>
+        <option <?= ($category=="Bus")?"selected" : "" ?>>Bus</option>
+        <option <?= ($category=="Truck")?"selected" : "" ?>>Truck</option>
+    </select>
+</div> <br>
                                 <div class="col-md-6">
-                                    <select id="inputState" class="form-select" name="cat">
-                                        <option disabled selected>Category</option>
-                                        <option>Car</option>
-                                        <option>Bus</option>
-                                        <option>Truck</option>
-                                    </select>
-                                </div> <br>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Model" name="model">
+                                    <input type="text" class="form-control" placeholder="Model" name="model" value="<?php echo $model ?>">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Price" name="price">
+                                    <input type="text" class="form-control" placeholder="Price" name="price" value="<?php echo $price ?>">
                                 </div>
 
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="SKU" name="sku">
+                                    <input type="text" class="form-control" placeholder="SKU" name="sku" value="<?php echo $sku ?>">
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Add</button>
+                                    <button type="submit" class="btn btn-primary">Edit</button>
                                     <button type="reset" class="btn btn-secondary">Reset</button>
                                 </div>
                             </form><!-- End No Labels Form -->
@@ -157,7 +157,7 @@
     <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="../assets/js/demo/datatables-demo.js"></script>
+    <script src="<?php echo site_url('assets/js/demo/datatables-demo.js') ?> "></script>
 
 </body>
 

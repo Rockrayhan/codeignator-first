@@ -15,6 +15,7 @@ class ProductController extends BaseController
         $this->products = new ProductModel();
     }
 
+    // data show
     public function index()
     {
         $data['products'] =  $this->products->findAll();
@@ -23,6 +24,7 @@ class ProductController extends BaseController
         return view('products/allProducts', $data);
     }
 
+// data insert
     public function create()
     {
         return view('products/create');
@@ -52,5 +54,23 @@ class ProductController extends BaseController
             $session->setFlashdata('msg', 'Inserted Successfully');
             $this->response->redirect('/products/');
         }
+    }
+
+
+    // edit data 
+
+    public function edit($id){
+        // echo $id;
+        $data = $this->products->find($id);
+        // print_r($data);
+        return view("products/edit", $data);
+    }
+
+
+    // data delete
+    public function delete($id){
+        $this->products->where('product_id', $id); 
+        $this->products->delete();
+        $this->response->redirect('/products');
     }
 }

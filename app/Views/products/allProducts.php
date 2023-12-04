@@ -76,6 +76,7 @@
                                             <td> Price </td>
                                             <td> SKU </td>
                                             <td> Model </td>
+                                            <td> Action </td>
                                         </tr>
                                     </thead>
                                     <tfoot style="font-weight: 900;">
@@ -86,6 +87,7 @@
                                             <td> Price </td>
                                             <td> SKU </td>
                                             <td> Model </td>
+                                            <td> Action </td>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -98,16 +100,20 @@
 
 
 
-                                        <?php foreach ($products as $product) : ?>
-                                            <tr>
-                                                <td> <?php echo $product['product_id']  ?> </td>
-                                                <td> <?php echo $product['product']  ?> </td>
-                                                <td> <?php echo $product['category']  ?> </td>
-                                                <td> <?php echo $product['price']  ?> </td>
-                                                <td> <?php echo $product['sku']  ?> </td>
-                                                <td> <?php echo $product['model']  ?> </td>
+<?php foreach ($products as $product) : ?>
+    <tr>
+        <td> <?php echo $product['product_id']  ?> </td>
+        <td> <?php echo $product['product']  ?> </td>
+        <td> <?php echo $product['category']  ?> </td>
+        <td> <?php echo $product['price']  ?> </td>
+        <td> <?php echo $product['sku']  ?> </td>
+        <td> <?php echo $product['model']  ?> </td>
+        <td> <a href="<?php echo base_url('products/delete/'.$product['product_id']); ?>"> <i class="btn btn-danger">Delete</i>  </a>
 
-                                            </tr>
+        <a href="<?php echo base_url('products/edit/'.$product['product_id']); ?>"> <i class="btn btn-warning"> Edit </i>  </a>
+            </td>
+
+    </tr>
 
                                         <?php endforeach; ?>
 
