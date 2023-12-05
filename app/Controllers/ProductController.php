@@ -38,6 +38,7 @@ class ProductController extends BaseController
             'price' => $this->request->getVar('price'),
             'sku' => $this->request->getVar('sku'),
             'model' => $this->request->getVar('model'),
+            'photo' => $this->request->getFile('photo')->getName('photo'),
         ];
 
         // print_r($data);
@@ -46,6 +47,7 @@ class ProductController extends BaseController
 
         $rules = [
             'name' => 'required|max_length[30]',
+            'photo' => 'uploaded[photo]|max_size[photo,1024]|ext_in[photo,jpg,jpeg]',
             // 'password' => 'required|max_length[255]|min_length[10]',
             // 'passconf' => 'required|max_length[255]|matches[password]',
             // 'email'    => 'required|max_length[254]|valid_email',
@@ -54,6 +56,9 @@ class ProductController extends BaseController
         if (! $this->validate($rules)) {
             return view('/products/create');
         } else {
+            // echo WRITEPATH;      // (check path to upload folder)
+            $img = $this->request->getFile('photo');
+            $img->move( WRITEPATH.'uploads' );
             $this->products->insert($data);
             $session = session();
             $session->setFlashdata('msg', 'Inserted Successfully');

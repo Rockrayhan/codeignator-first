@@ -54,16 +54,17 @@
             <div class="col-lg-12">
             <div class="card">
                         <div class="card-body">
+                            <?php  echo validation_list_errors()  ?>
 
                             <h5 class="card-title">Add Product Form</h5>
 
                             <!-- No Labels Form -->
-                            <form class="row g-3" method="post" action="/products/store">
+                            <form class="row g-3" method="post" action="/products/store" enctype="multipart/form-data">
                                 <div class="col-md-12">
                                     <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= set_value('name') ?>" >
                                 </div> <br>
 
-                                <div class="col-md-6">
+                                <div class="col-md-2">
                                     <select id="inputState" class="form-select" name="cat">
                                         <option disabled selected>Category</option>
                                         <option>Car</option>
@@ -81,6 +82,10 @@
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="SKU" name="sku">
                                 </div>
+
+                                <div class="col-md-12">
+                                    <input type="file" class="form-control" placeholder="Add a Photo" name="photo" value="<?= set_value('photo') ?>">
+                                </div> <br>
 
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary">Add</button>
