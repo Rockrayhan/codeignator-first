@@ -54,39 +54,47 @@
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-body">
+                                            <!-- === alert ===-->
+                                            <?php if (session()->getFlashdata('msg')) : ?>
+                                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                    <?php echo session()->getFlashdata('msg'); ?>
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                            <?php endif; ?>
+                                            <!-- ====== -->
 
                                             <h5 class="card-title">Add Product Form</h5>
 
                                             <!-- No Labels Form -->
-        <form class="row g-3" method="post" action="<?php echo site_url('/products/update/'.$product_id) ?>">
-            <div class="col-md-12">
-                <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= $product ?>">
-            </div> <br>
+                                            <form class="row g-3" method="post" action="<?php echo site_url('/products/update/' . $product_id) ?>">
+                                                <div class="col-md-12">
+                                                    <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= $product ?>">
+                                                </div> <br>
 
-            <div class="col-md-6">
-                <select id="inputState" class="form-select" name="cat">
-                    <option disabled selected>Category</option>
-                    <option <?= ($category == "Car") ? "selected" : "" ?>>Car</option>
-                    <option <?= ($category == "Bus") ? "selected" : "" ?>>Bus</option>
-                    <option <?= ($category == "Truck") ? "selected" : "" ?>>Truck</option>
-                </select>
-            </div> <br>
-            <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Model" name="model" value="<?php echo $model ?>">
-            </div>
-            <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Price" name="price" value="<?php echo $price ?>">
-            </div>
+                                                <div class="col-md-6">
+                                                    <select id="inputState" class="form-select" name="cat">
+                                                        <option disabled selected>Category</option>
+                                                        <option <?= ($category == "Car") ? "selected" : "" ?>>Car</option>
+                                                        <option <?= ($category == "Bus") ? "selected" : "" ?>>Bus</option>
+                                                        <option <?= ($category == "Truck") ? "selected" : "" ?>>Truck</option>
+                                                    </select>
+                                                </div> <br>
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" placeholder="Model" name="model" value="<?php echo $model ?>">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" placeholder="Price" name="price" value="<?php echo $price ?>">
+                                                </div>
 
-            <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="SKU" name="sku" value="<?php echo $sku ?>">
-            </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" placeholder="SKU" name="sku" value="<?php echo $sku ?>">
+                                                </div>
 
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Edit</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
-            </div>
-        </form><!-- End No Labels Form -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-primary">Edit</button>
+                                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                                </div>
+                                            </form><!-- End No Labels Form -->
 
                                         </div>
                                     </div>

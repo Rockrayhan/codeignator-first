@@ -83,7 +83,7 @@ public function update($id){
 
     $this->products->update($id, $data);
     $session = session();
-    $session->getFlashdata('msg', 'updated Successfully');
+    $session->setFlashdata('msg', 'updated Successfully');
     $this->response->redirect('/products');
 
 } 
