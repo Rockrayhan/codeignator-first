@@ -15,6 +15,8 @@ $routes->post('/products/store', 'ProductController::store');
 $routes->get('/products/delete/(:num)', 'ProductController::delete/$1');
 //edit
 $routes->get('/products/edit/(:num)', 'ProductController::edit/$1');
+//update
+$routes->post('/products/update/(:num)', 'ProductController::update/$1');
 
 
 

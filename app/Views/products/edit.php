@@ -12,7 +12,7 @@
     <title> Edit </title>
 
     <!-- Custom fonts for this template-->
-    <link href="<?php  echo site_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo site_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
@@ -46,56 +46,56 @@
                 <!-- Begin Page Content -->
                 <div class="container">
 
-<div class="card o-hidden border-0 shadow-lg my-5">
-    <div class="card-body p-0">
-        <h1> Insert Product </h1>
-        <!-- Nested Row within Card Body -->
-        <div class="row" style="height: 600px;">
-            <div class="col-lg-12">
-            <div class="card">
-                        <div class="card-body">
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <h1> Insert Product </h1>
+                            <!-- Nested Row within Card Body -->
+                            <div class="row" style="height: 600px;">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-body">
 
-                            <h5 class="card-title">Add Product Form</h5>
+                                            <h5 class="card-title">Add Product Form</h5>
 
-                            <!-- No Labels Form -->
-                            <form class="row g-3" method="post" action="/products/store">
-                                <div class="col-md-12">
-                                    <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= $product ?>" >
-                                </div> <br>
+                                            <!-- No Labels Form -->
+        <form class="row g-3" method="post" action="<?php echo site_url('/products/update/'.$product_id) ?>">
+            <div class="col-md-12">
+                <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= $product ?>">
+            </div> <br>
 
-<div class="col-md-6">
-    <select id="inputState" class="form-select" name="cat">
-        <option disabled selected>Category</option>
-        <option <?= ($category=="Car")?"selected" : "" ?>>Car</option>
-        <option <?= ($category=="Bus")?"selected" : "" ?>>Bus</option>
-        <option <?= ($category=="Truck")?"selected" : "" ?>>Truck</option>
-    </select>
-</div> <br>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Model" name="model" value="<?php echo $model ?>">
+            <div class="col-md-6">
+                <select id="inputState" class="form-select" name="cat">
+                    <option disabled selected>Category</option>
+                    <option <?= ($category == "Car") ? "selected" : "" ?>>Car</option>
+                    <option <?= ($category == "Bus") ? "selected" : "" ?>>Bus</option>
+                    <option <?= ($category == "Truck") ? "selected" : "" ?>>Truck</option>
+                </select>
+            </div> <br>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Model" name="model" value="<?php echo $model ?>">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Price" name="price" value="<?php echo $price ?>">
+            </div>
+
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="SKU" name="sku" value="<?php echo $sku ?>">
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Edit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form><!-- End No Labels Form -->
+
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Price" name="price" value="<?php echo $price ?>">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="SKU" name="sku" value="<?php echo $sku ?>">
-                                </div>
-
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Edit</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
-                                </div>
-                            </form><!-- End No Labels Form -->
-
+                            </div>
                         </div>
                     </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-</div>
+                </div>
                 <!-- /.container-fluid -->
 
             </div>

@@ -63,13 +63,30 @@ class ProductController extends BaseController
 
 
     // edit data 
-
     public function edit($id){
         // echo $id;
         $data = $this->products->find($id);
         // print_r($data);
         return view("products/edit", $data);
     }
+
+
+    // update
+public function update($id){
+    $data = [
+        'product' => $this->request->getVar('name'),
+        'category' => $this->request->getVar('cat'),
+        'price' => $this->request->getVar('price'),
+        'sku' => $this->request->getVar('sku'),
+        'model' => $this->request->getVar('model'),
+    ];
+
+    $this->products->update($id, $data);
+    $session = session();
+    $session->getFlashdata('msg', 'updated Successfully');
+    $this->response->redirect('/products');
+
+} 
 
 
     // data delete
