@@ -18,5 +18,9 @@ $routes->get('/products/edit/(:num)', 'ProductController::edit/$1');
 //update
 $routes->post('/products/update/(:num)', 'ProductController::update/$1');
 
+// signin
+$routes->get('/signup', 'SignupController::index');
+
+$routes->match(['get','post'] ,'signup/store', 'SignupController::store');
 
 
