@@ -30,7 +30,9 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 w-100 img-fluid d-none d-lg-block">
+                        <img src="https://w0.peakpx.com/wallpaper/963/555/HD-wallpaper-funny-dogs-swag-cool-thumbnail.jpg" alt="">
+                    </div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">

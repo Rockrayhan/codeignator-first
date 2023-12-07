@@ -30,14 +30,16 @@ class SignupController extends BaseController
             $data = [
                 'name' => $this->request->getVar('name'),
                 'email' => $this->request->getVar('email'),
-                'password' => $this->request->getVar('password'),
+                // 'password' => $this->request->getVar('password'),
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
+
             ];
 
             $userModel = new UserModel();
             $userModel->save($data);
             $session = session();
             $session-> setFlashdata( 'msg', 'Signup Completed' );
-            return redirect()->to('/');
+            return redirect()->to('/login');
         } else {
             $data['validation'] = $this->validator;
             return view('signup', $data) ;
