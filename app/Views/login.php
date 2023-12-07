@@ -47,7 +47,7 @@
                                     <?php echo session()->getFlashdata('msg'); ?>
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
-                            <?php endif; ?>
+    <?php endif; ?>
                             <!-- ====== -->
         <h1 class="h4 text-gray-900 font-weight-bolder mb-4">Welcome Back!</h1>
     </div>

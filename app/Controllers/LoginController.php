@@ -32,6 +32,12 @@ class LoginController extends BaseController
             $dbpass =  $data['password'];
             $verified = password_verify($formpass, $dbpass);
             if ($verified){
+                $userData = [
+                    "name" => $data['name'],
+                    "email" => $data['email'],
+                    'isLoggedIn' => TRUE
+                ];
+                $session->set($userData);
                 return redirect()->to('/') ;
             } else {
                 $session->setFlashdata('msg', 'Your Password is Incorrect');
@@ -43,5 +49,10 @@ class LoginController extends BaseController
         }
 
         // print_r($data);
+    }
+
+    public function logout(){
+        session()->destroy();
+        return redirect()->to('login');
     }
 }

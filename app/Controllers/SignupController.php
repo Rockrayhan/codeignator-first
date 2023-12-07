@@ -45,4 +45,5 @@ class SignupController extends BaseController
             return view('signup', $data) ;
         }
     }
+
 }
