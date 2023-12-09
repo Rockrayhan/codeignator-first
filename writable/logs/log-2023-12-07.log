@@ -72,3 +72,43 @@ INFO - 2023-12-07 07:09:11 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-12-07 07:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-12-07 07:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-12-07 07:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-07 07:17:06 --> Undefined variable: data
+in APPPATH\Views\includes\topbar.php on line 172.
+ 1 APPPATH\Views\includes\topbar.php(172): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\app\\Views\\includes\\topbar.php', 172, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\app\\Views\\includes\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('includes/topbar.php', null, true)
+ 5 APPPATH\Views\products\allProducts.php(42): CodeIgniter\View\View->include('includes/topbar.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\app\\Views\\products\\allProducts.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('products/allProducts', [], true)
+ 9 APPPATH\Controllers\ProductController.php(24): view('products/allProducts', [...])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ProductController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
+CRITICAL - 2023-12-07 07:17:14 --> Undefined variable: data
+in APPPATH\Views\includes\topbar.php on line 172.
+ 1 APPPATH\Views\includes\topbar.php(172): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\app\\Views\\includes\\topbar.php', 172, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\app\\Views\\includes\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('includes/topbar.php', null, true)
+ 5 APPPATH\Views\products\allProducts.php(42): CodeIgniter\View\View->include('includes/topbar.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\app\\Views\\products\\allProducts.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('products/allProducts', [], true)
+ 9 APPPATH\Controllers\ProductController.php(24): view('products/allProducts', [...])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ProductController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
+INFO - 2023-12-07 07:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 07:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 07:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 07:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-07 09:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
