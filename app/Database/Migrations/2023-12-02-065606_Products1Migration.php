@@ -8,20 +8,17 @@ class Products1Migration extends Migration
 {
     public function up()
     {
-      
-	
-	
-	
-	
-	
-	 
-
         $this->forge->addField([
             'id' => [
                 'type'           => 'INT',
                 'constraint'     => 5,
                 'unsigned'       => true,
                 'auto_increment' => true,
+            ],
+            'category_id' => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
             ],
             'product' => [
                 'type'       => 'VARCHAR',
@@ -41,12 +38,13 @@ class Products1Migration extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('product1');
+        $this->forge->addForeignKey('category_id', 'category', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->createTable('products');
 
     }
 
     public function down()
     {
-        $this->forge->dropTable('product1');
+        $this->forge->dropTable('products');
     }
 }
