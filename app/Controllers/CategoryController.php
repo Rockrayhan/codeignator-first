@@ -22,4 +22,9 @@ class CategoryController extends BaseController
         // print_r($data);
         return view('category/index', $data);
     }
+
+
+    public function edit($id){
+        
+    }
 }
