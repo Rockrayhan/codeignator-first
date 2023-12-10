@@ -3,21 +3,27 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\CategoryModel;      // sent cat data
 use App\Models\ProductModel;
+
+
 
 class ProductController extends BaseController
 {
     private $products;
+    private $category;              // get cat data
     protected $helpers = ['form'];
 
     public function __construct()
     {
         $this->products = new ProductModel();
+        $this->category = new CategoryModel();      // get cat data
     }
 
     // data show
     public function index()
-    {
+    {   
+        $this->products->join('category', 'category.id = products.category_id'); 
         $data['products'] =  $this->products->findAll();
         $data['title'] = "All Products";
         // print_r($data);
@@ -27,18 +33,19 @@ class ProductController extends BaseController
 // data insert
     public function create()
     {
-        return view('products/create');
+        $data['cats'] =  $this->category->findAll();     // get cat data
+        return view('products/create', $data);
     }
     public function store()
     {
         //return $this->request->getVar('name');   // get data from the form
         $data = [
             'product' => $this->request->getVar('name'),
-            'category' => $this->request->getVar('cat'),
+            'category_id' => $this->request->getVar('cat'),
             'price' => $this->request->getVar('price'),
             'sku' => $this->request->getVar('sku'),
             'model' => $this->request->getVar('model'),
-            'photo' => $this->request->getFile('photo')->getName('photo'),
+            // 'photo' => $this->request->getFile('photo')->getName('photo'),
         ];
 
         // print_r($data);
@@ -57,8 +64,8 @@ class ProductController extends BaseController
             return view('/products/create');
         } else {
             // echo WRITEPATH;      // (check path to upload folder)
-            $img = $this->request->getFile('photo');
-            $img->move( WRITEPATH.'uploads' );
+            // $img = $this->request->getFile('photo');
+            // $img->move( WRITEPATH.'uploads' );
             $this->products->insert($data);
             $session = session();
             $session->setFlashdata('msg', 'Inserted Successfully');

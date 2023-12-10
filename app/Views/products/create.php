@@ -50,7 +50,7 @@
     <div class="card-body p-0">
         <h1> Insert Product </h1>
         <!-- Nested Row within Card Body -->
-        <div class="row" style="height: 600px;">
+        <div class="row">
             <div class="col-lg-12">
             <div class="card">
                         <div class="card-body">
@@ -67,21 +67,22 @@
                                 <div class="col-md-2">
                                     <select id="inputState" class="form-select" name="cat">
                                         <option disabled selected>Category</option>
-                                        <option>Car</option>
-                                        <option>Bus</option>
-                                        <option>Truck</option>
+                                        <?php  foreach( $cats as $cat ) :?>
+                                        <option value="<?= $cat['id']?>"> <?= $cat['category'] ?> </option>
+                                        <?php  endforeach ; ?>    
+
                                     </select>
                                 </div> <br>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Model" name="model">
-                                </div>
+                                </div> <br>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Price" name="price">
-                                </div>
+                                </div> <br>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="SKU" name="sku">
-                                </div>
+                                </div> <br>
 
                                 <div class="col-md-12">
                                     <input type="file" class="form-control" placeholder="Add a Photo" name="photo" value="<?= set_value('photo') ?>">

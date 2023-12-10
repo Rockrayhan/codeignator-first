@@ -16,8 +16,8 @@ class ProductSeeder extends Seeder
        for($num=0;$num<10;$num++){
            $product = new ProductModel();
 
+           $insertdata['category_id'] = rand(1,10);
            $insertdata['product'] = random_string('alpha', 10);
-           $insertdata['category'] = random_string('alpha',);
            $insertdata['price'] = rand(50,200);
            $insertdata['sku'] = random_string('alpha',30);
            $insertdata['model'] = random_string('alpha',10);
