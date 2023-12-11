@@ -2,3 +2,62 @@ INFO - 2023-12-11 03:16:56 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-12-11 03:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-12-11 03:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-12-11 03:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 03:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 03:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 03:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 04:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 04:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 05:00:42 --> "cors" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 580.
+ 1 SYSTEMPATH\Filters\Filters.php(580): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\Filters\Filters.php(263): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 SYSTEMPATH\Filters\Filters.php(174): CodeIgniter\Filters\Filters->initialize('productsall')
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('productsall', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
+CRITICAL - 2023-12-11 05:00:43 --> "cors" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 580.
+ 1 SYSTEMPATH\Filters\Filters.php(580): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\Filters\Filters.php(263): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 SYSTEMPATH\Filters\Filters.php(174): CodeIgniter\Filters\Filters->initialize('productsall')
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('productsall', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
+CRITICAL - 2023-12-11 05:46:29 --> "cors" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 580.
+ 1 SYSTEMPATH\Filters\Filters.php(580): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\Filters\Filters.php(263): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 SYSTEMPATH\Filters\Filters.php(174): CodeIgniter\Filters\Filters->initialize('productsall')
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('productsall', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
+CRITICAL - 2023-12-11 05:46:29 --> "cors" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 580.
+ 1 SYSTEMPATH\Filters\Filters.php(580): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\Filters\Filters.php(263): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 SYSTEMPATH\Filters\Filters.php(174): CodeIgniter\Filters\Filters->initialize('productsall')
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('productsall', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
+CRITICAL - 2023-12-11 05:46:39 --> "cors" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 580.
+ 1 SYSTEMPATH\Filters\Filters.php(580): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\Filters\Filters.php(263): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 SYSTEMPATH\Filters\Filters.php(174): CodeIgniter\Filters\Filters->initialize('productsall')
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('productsall', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
+CRITICAL - 2023-12-11 05:46:39 --> "cors" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 580.
+ 1 SYSTEMPATH\Filters\Filters.php(580): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\Filters\Filters.php(263): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 SYSTEMPATH\Filters\Filters.php(174): CodeIgniter\Filters\Filters->initialize('productsall')
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('productsall', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\wdpf55_codignator\\codeigniter4-one\\public\\index.php')
