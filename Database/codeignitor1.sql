@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2023 at 07:35 AM
+-- Generation Time: Dec 19, 2023 at 05:50 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -84,9 +84,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `product`, `price`, `sku`, `model`) VALUES
-(1, 0, 'ALAUDDIN', '1500', 'asd', 'yamaha'),
-(2, 1, 'ALAUDDIN', '1500', 'asd', 'yamaha'),
-(3, 2, 'new shirt', '1500', '213', 'yamaha');
+(3, 2, 'new shirt', '1500', '213', 'yamaha'),
+(4, 1, 'Web Design', '420', '213', 'yamaha'),
+(5, 2, 'product 1', '1500', 'asd', 'yamaha'),
+(6, 1, 'new product', '1500', '213', 'yamaha'),
+(7, 1, 'ALAUDDIN', '150', '213', 'yamaha');
 
 -- --------------------------------------------------------
 
@@ -98,15 +100,17 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(150) DEFAULT NULL,
   `email` varchar(150) DEFAULT NULL,
-  `password` varchar(150) DEFAULT NULL
+  `password` varchar(150) DEFAULT NULL,
+  `role` enum('Admin','Editor') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(10, 'ALAUDDIN quasemi', 'abc@gmail.com', '$2y$10$UK1oXMNGaHv75qmdh/UVqOCK/kFVGmllKQrxIwnqsAj5pF5pxxzfG');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`) VALUES
+(10, 'ALAUDDIN quasemi', 'abc@gmail.com', '$2y$10$UK1oXMNGaHv75qmdh/UVqOCK/kFVGmllKQrxIwnqsAj5pF5pxxzfG', 'Admin'),
+(13, 'masum', 'xyz@gmail.com', '$2y$10$9/D2sl3MkAi8lxNP.MCGAu8oqBxDj9/zAJwP6oWHLwzjw9.r7gdAK', 'Editor');
 
 --
 -- Indexes for dumped tables
@@ -156,13 +160,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

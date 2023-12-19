@@ -35,10 +35,17 @@ class LoginController extends BaseController
                 $userData = [
                     "name" => $data['name'],
                     "email" => $data['email'],
+                    "role" => $data['role'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($userData);
-                return redirect()->to('/') ;
+                if($data['role']=='Admin'){
+                    return redirect()->to('/');
+                }
+                if($data['role']=='Editor'){
+                    return redirect()->to('/editor');
+                }
+                // return redirect()->to('/') ;   //commented for multiple auth
             } else {
                 $session->setFlashdata('msg', 'Your Password is Incorrect');
                 return view('login') ;
