@@ -66,7 +66,7 @@
                                             <h5 class="card-title">Add Product Form</h5>
 
                                             <!-- No Labels Form -->
-                                            <form class="row g-3" method="post" action="<?php echo site_url('/products/update/' . $product_id) ?>">
+                                            <form class="row g-3" method="post" action="<?php echo site_url('/products/update/' . $id) ?>">
                                                 <div class="col-md-12">
                                                     <input type="text" name="name" class="form-control" placeholder="Product Name" value="<?= $product ?>">
                                                 </div> <br>
@@ -74,9 +74,9 @@
                                                 <div class="col-md-6">
                                                     <select id="inputState" class="form-select" name="cat">
                                                         <option disabled selected>Category</option>
-                                                        <option <?= ($category == "Car") ? "selected" : "" ?>>Car</option>
-                                                        <option <?= ($category == "Bus") ? "selected" : "" ?>>Bus</option>
-                                                        <option <?= ($category == "Truck") ? "selected" : "" ?>>Truck</option>
+                                                        <option value="<?= ($category == "Car") ? "selected" : "" ?>">Car</option>
+                                                        <option value="<?= ($category == "Bus") ? "selected" : "" ?>">Bus</option>
+                                                        <option value="<?= ($category == "Truck") ? "selected" : "" ?>">Truck</option>
                                                     </select>
                                                 </div> <br>
                                                 <div class="col-md-6">

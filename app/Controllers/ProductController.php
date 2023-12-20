@@ -23,7 +23,7 @@ class ProductController extends BaseController
     // data show
     public function index()
     {   
-        $this->products->join('category', 'category.id = products.category_id'); 
+       
         $data['products'] =  $this->products->findAll();
         $data['title'] = "All Products";
         // print_r($data);
@@ -33,6 +33,7 @@ class ProductController extends BaseController
 // data insert
     public function create()
     {
+        $this->products->join('category', 'category.id = products.category_id'); 
         $data['cats'] =  $this->category->findAll();     // get cat data
         return view('products/create', $data);
     }
@@ -103,7 +104,7 @@ public function update($id){
 
     // data delete
     public function delete($id){
-        $this->products->where('product_id', $id); 
+        $this->products->where('id', $id); 
         $this->products->delete();
         $this->response->redirect('/products');
     }

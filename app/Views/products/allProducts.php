@@ -104,11 +104,11 @@
     <tr>
         <td> <?php echo $product['id']  ?> </td>
         <td> <?php echo $product['product']  ?> </td>
-        <td> <?php echo $product['category']  ?> </td>
+        <td> <?php echo $product['category_id']  ?> </td>
         <td> <?php echo $product['price']  ?> </td>
         <td> <?php echo $product['sku']  ?> </td>
         <td> <?php echo $product['model']  ?> </td>
-        <td> <a href="<?php echo base_url('products/delete/'.$product['id']); ?>"> <i class="btn btn-danger" onclick="return confirm('Data will be deleted Permanently..!!!')">Delete</i>  </a>
+        <td> <a href="<?php echo base_url('/products/delete/'.$product['id']); ?>"> <i class="btn btn-danger" onclick="return confirm('Data will be deleted Permanently..!!!')">Delete</i>  </a>
 
         <a href="<?php echo base_url('products/edit/'.$product['id']); ?>"> <i class="btn btn-warning"> Edit </i>  </a>
             </td>
